@@ -1,6 +1,8 @@
 package com.agileengine.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,10 +22,14 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
     private String description;
 
+    @JsonBackReference
+    @JsonManagedReference
+    @JsonIgnore
     @ManyToMany(mappedBy = "products")
-    @JsonBackReference // Evita la serialización infinita
     private List<Order> orders;
+
 }

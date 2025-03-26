@@ -1,6 +1,8 @@
 package com.agileengine.demo.model;
 
 import com.agileengine.demo.model.Product;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,15 +25,17 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String description;
     private String status;
 
+    @JsonBackReference
     @ManyToMany
     @JoinTable(
             name = "order_product",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
-    @JsonManagedReference // Serializa esta parte
+    @JsonIgnore
     private List<Product> products;
 }

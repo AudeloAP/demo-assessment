@@ -2,6 +2,7 @@ package com.agileengine.demo.controller;
 
 import com.agileengine.demo.model.ErrorResponseBody;
 import com.agileengine.demo.model.Product;
+import com.agileengine.demo.model.ProductDTO;
 import com.agileengine.demo.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,9 +40,9 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Integer> createProduct(@RequestBody Product product){
+    public ResponseEntity<Product> createProduct(@RequestBody Product product){
         logger.info(" --- Running createProduct controller");
-        Integer newProductId = productService.saveProduct(product);
+        Product newProductId = productService.saveProduct(product);
 
         return new ResponseEntity<>(newProductId, HttpStatus.CREATED);
     }
@@ -52,7 +53,7 @@ public class ProductController {
 
         Optional<Product> productToUpdate = productService.getProductById(id);
 
-        if (!productToUpdate.isPresent())
+        if (productToUpdate.isEmpty())
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
 //        if (product.getId() != null)

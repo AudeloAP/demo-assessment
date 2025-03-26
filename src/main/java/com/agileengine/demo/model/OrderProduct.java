@@ -12,16 +12,15 @@ import lombok.*;
 @ToString
 public class OrderProduct {
 
-    @EmbeddedId
-    private OrderProductKey id = new OrderProductKey();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @ManyToOne
-    @MapsId("orderId")
     @JoinColumn(name = "order_id")
     private Order order;
 
     @ManyToOne
-    @MapsId("productId")
     @JoinColumn(name = "product_id")
     private Product product;
 }

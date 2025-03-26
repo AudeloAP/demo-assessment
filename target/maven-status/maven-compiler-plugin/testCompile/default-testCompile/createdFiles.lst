@@ -1,1 +1,3 @@
-com\agileengine\demo\DemoApplicationTests.class
+com\agileengine\demo\OrderControllerTests.class
+com\agileengine\demo\ProductControllerTests.class
+com\agileengine\demo\OrderProductControllerTests.class
