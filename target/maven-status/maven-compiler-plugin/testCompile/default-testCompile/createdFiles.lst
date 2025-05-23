@@ -1,3 +1,6 @@
-com\agileengine\demo\OrderControllerTests.class
-com\agileengine\demo\ProductControllerTests.class
-com\agileengine\demo\OrderProductControllerTests.class
+com\agileengine\demo\controller\OrderControllerTests.class
+com\agileengine\demo\service\OrderItemService.class
+com\agileengine\demo\service\ProductServiceTests.class
+com\agileengine\demo\controller\OrderProductControllerTests.class
+com\agileengine\demo\service\OderServiceTests.class
+com\agileengine\demo\controller\ProductControllerTests.class

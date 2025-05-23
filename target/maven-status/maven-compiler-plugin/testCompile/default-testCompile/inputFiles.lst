@@ -1,3 +1,6 @@
-C:\code\study\demo\src\test\java\com\agileengine\demo\OrderControllerTests.java
-C:\code\study\demo\src\test\java\com\agileengine\demo\OrderProductControllerTests.java
-C:\code\study\demo\src\test\java\com\agileengine\demo\ProductControllerTests.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\controller\OrderControllerTests.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\controller\OrderProductControllerTests.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\controller\ProductControllerTests.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\service\OderServiceTests.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\service\OrderItemService.java
+C:\code\study\demo-assessment\src\test\java\com\agileengine\demo\service\ProductServiceTests.java
